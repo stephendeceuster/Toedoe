@@ -52,7 +52,7 @@ body {
         color: var.$red;
         background-color: var.$white;
         &::placeholder {
-            color: var.$red;
+          color: var.$red;
         }
       }
     }
@@ -91,6 +91,8 @@ body {
     }
     a.icon {
       color: var.$green;
+      display: flex;
+      align-items: center;
       &--remove {
         color: var.$bin-grey;
         &:hover {
@@ -111,7 +113,7 @@ body {
           color: var.$white;
         }
         .icon-checkmark {
-            position: absolute;
+          position: absolute;
         }
       }
     }
