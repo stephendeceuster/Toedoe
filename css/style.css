@@ -191,6 +191,7 @@ body {
   border-radius: 0.5rem 4.125rem 4.125rem 0.5rem;
   border: none;
   padding: 1.5rem;
+  padding-right: 5rem;
   width: 100%;
   margin-right: -4.125rem;
   font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
