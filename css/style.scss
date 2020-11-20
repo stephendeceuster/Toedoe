@@ -1,0 +1,12 @@
+@use './base/reset';
+@use './base/variables' as var;
+@use './base/fonts';
+
+body {
+  background: var.$bodybg;
+  .todoApp{
+    width: 90%;
+    max-width: 34rem;
+    margin: 2rem auto; 
+  }
+}
