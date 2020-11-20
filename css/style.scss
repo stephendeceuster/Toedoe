@@ -3,57 +3,106 @@
 @use './base/fonts';
 
 input:-webkit-autofill:focus {
-    outline: none !important;
+  outline: none !important;
 }
 
 body {
   background: var.$bodybg;
-  .todoApp{
-    width: 90%;
-    max-width: 34rem;
-    margin: 2rem auto; 
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      color: var.$green;
-      margin-bottom: 1rem;
-    }
-    &__form {
-        background-color: var.$green;
-        width: 90%;
-        border-radius: 0.5rem;
-        padding: 1.125rem;
-        display:flex;
-        justify-items: flex-start;
-        margin-bottom: 1rem;
-        &__input {
-            color: var.$white;
-            background-color: var.$green2;
-            border-radius: 0.5rem 4.125rem 4.125rem 0.5rem;
-            border: none;
-            padding: 1rem;
-            width: 100%;
-            margin-right: -4.125rem;
-            &::placeholder {
-                color: var.$white;
-                opacity: 0.8;
-            }
-            &:focus {
-                border: none;
-            }
-        }
-        &__button {
-            display: flex;
-            justify-content: center;
+}
 
-            align-items: center;
-            color: var.$green;
-            background-color: var.$white;
-            width: 4.125rem;
-            height: 4.125rem;
-            border-radius: 50%;
-        }
+.todoApp {
+  width: 90%;
+  max-width: 34rem;
+  margin: 2rem auto;
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: var.$green;
+    margin-bottom: 2rem;
+    transform: rotate(-10deg);
+  }
+  &__form {
+    background-color: var.$green;
+    width: 90%;
+    border-radius: 0.5rem;
+    padding: 1.125rem;
+    display: flex;
+    justify-items: flex-start;
+    margin-bottom: 1rem;
+    &__input {
+      color: var.$white;
+      background-color: var.$green2;
+      border-radius: 0.5rem 4.125rem 4.125rem 0.5rem;
+      border: none;
+      padding: 1.5rem;
+      width: 100%;
+      margin-right: -4.125rem;
+      font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+      font-size: 1rem;
+      &::placeholder {
+        color: var.$white;
+        opacity: 0.4;
+      }
+      &:focus {
+        outline:none;
+      }
+    }
+    &__button {
+      display: flex;
+      justify-content: center;
+
+      align-items: center;
+      color: var.$green;
+      background-color: var.$white;
+      width: 4.125rem;
+      height: 4.125rem;
+      border-radius: 50%;
     }
   }
+  &__list {
+      width: 90%;
+      padding: 0 1.125rem;
+      &__item {
+          background-color: var.$white;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 0.5rem;
+          padding: 1.5rem;
+          border-radius: 0.5rem;
+          .text {
+              margin-right: auto;
+          }
+      }
+  }
 }
+
+a.icon {
+    color: var.$green;
+    &--remove {
+        color: var.$bin-grey;
+        &:hover {
+            color: var.$red;
+        }
+    }
+    &--check {
+        border-radius: 50%;
+        border: 2px solid var.$green; 
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 2rem;
+        &:hover {
+            background-color: var.$green;
+            color: var.$white;
+        }
+        .icon-checkmark{
+            margin: 0.25rem;
+        }
+        
+    }  
+}
+
 

@@ -162,18 +162,20 @@ input:-webkit-autofill:focus {
 body {
   background: #eef3f6;
 }
-body .todoApp {
+
+.todoApp {
   width: 90%;
   max-width: 34rem;
   margin: 2rem auto;
 }
-body .todoApp h1 {
+.todoApp h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #19ba99;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  transform: rotate(-10deg);
 }
-body .todoApp__form {
+.todoApp__form {
   background-color: #19ba99;
   width: 90%;
   border-radius: 0.5rem;
@@ -182,23 +184,25 @@ body .todoApp__form {
   justify-items: flex-start;
   margin-bottom: 1rem;
 }
-body .todoApp__form__input {
+.todoApp__form__input {
   color: #fff;
   background-color: #65c4ae;
   border-radius: 0.5rem 4.125rem 4.125rem 0.5rem;
   border: none;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 100%;
   margin-right: -4.125rem;
+  font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+  font-size: 1rem;
 }
-body .todoApp__form__input::placeholder {
+.todoApp__form__input::placeholder {
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.4;
 }
-body .todoApp__form__input:focus {
-  border: none;
+.todoApp__form__input:focus {
+  outline: none;
 }
-body .todoApp__form__button {
+.todoApp__form__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,6 +211,49 @@ body .todoApp__form__button {
   width: 4.125rem;
   height: 4.125rem;
   border-radius: 50%;
+}
+.todoApp__list {
+  width: 90%;
+  padding: 0 1.125rem;
+}
+.todoApp__list__item {
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.todoApp__list__item .text {
+  margin-right: auto;
+}
+
+a.icon {
+  color: #19ba99;
+}
+a.icon--remove {
+  color: #bcccc6;
+}
+a.icon--remove:hover {
+  color: #d13947;
+}
+a.icon--check {
+  border-radius: 50%;
+  border: 2px solid #19ba99;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 2rem;
+}
+a.icon--check:hover {
+  background-color: #19ba99;
+  color: #fff;
+}
+a.icon--check .icon-checkmark {
+  margin: 0.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
