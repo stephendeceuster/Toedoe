@@ -183,6 +183,7 @@ body {
   display: flex;
   justify-items: flex-start;
   margin-bottom: 1rem;
+  box-shadow: 0px 15px 10px -15px #cbd5d2;
 }
 .todoApp__form__input {
   color: #fff;
@@ -212,6 +213,11 @@ body {
   height: 4.125rem;
   border-radius: 50%;
 }
+.todoApp__form__button:hover {
+  color: #fff;
+  background-color: #19ba99;
+  border: 2px solid #fff;
+}
 .todoApp__list {
   width: 90%;
   padding: 0 1.125rem;
@@ -224,21 +230,21 @@ body {
   margin-bottom: 0.5rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
+  box-shadow: 0px 15px 10px -15px #cbd5d2;
 }
 .todoApp__list__item .text {
   margin-right: auto;
 }
-
-a.icon {
+.todoApp__list a.icon {
   color: #19ba99;
 }
-a.icon--remove {
+.todoApp__list a.icon--remove {
   color: #bcccc6;
 }
-a.icon--remove:hover {
+.todoApp__list a.icon--remove:hover {
   color: #d13947;
 }
-a.icon--check {
+.todoApp__list a.icon--check {
   border-radius: 50%;
   border: 2px solid #19ba99;
   width: 2rem;
@@ -248,12 +254,32 @@ a.icon--check {
   align-items: center;
   margin-left: 2rem;
 }
-a.icon--check:hover {
+.todoApp__list a.icon--check:hover {
   background-color: #19ba99;
   color: #fff;
 }
-a.icon--check .icon-checkmark {
-  margin: 0.25rem;
+.todoApp__list a.icon--check .icon-checkmark {
+  position: absolute;
+}
+
+.todoApp__list__item--checked .text {
+  color: #cbd5d2;
+  position: relative;
+  display: inline-block;
+}
+.todoApp__list__item--checked .text:before {
+  content: "";
+  height: 2px;
+  width: calc(100% + 8px);
+  position: absolute;
+  background-color: #19ba99;
+  top: 48%;
+  opacity: 0.4;
+  left: -4px;
+}
+.todoApp__list__item--checked a.icon--check {
+  background-color: #19ba99;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -29,6 +29,7 @@ body {
     display: flex;
     justify-items: flex-start;
     margin-bottom: 1rem;
+    box-shadow: 0px 15px 10px -15px var.$grey;
     &__input {
       color: var.$white;
       background-color: var.$green2;
@@ -44,7 +45,7 @@ body {
         opacity: 0.4;
       }
       &:focus {
-        outline:none;
+        outline: none;
       }
     }
     &__button {
@@ -57,37 +58,40 @@ body {
       width: 4.125rem;
       height: 4.125rem;
       border-radius: 50%;
+      &:hover {
+        color: var.$white;
+        background-color: var.$green;
+        border: 2px solid var.$white;
+      }
     }
   }
   &__list {
-      width: 90%;
-      padding: 0 1.125rem;
-      &__item {
-          background-color: var.$white;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          margin-bottom: 0.5rem;
-          padding: 1.5rem;
-          border-radius: 0.5rem;
-          .text {
-              margin-right: auto;
-          }
+    width: 90%;
+    padding: 0 1.125rem;
+    &__item {
+      background-color: var.$white;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0px 15px 10px -15px var.$grey;
+      .text {
+        margin-right: auto;
       }
-  }
-}
-
-a.icon {
-    color: var.$green;
-    &--remove {
+    }
+    a.icon {
+      color: var.$green;
+      &--remove {
         color: var.$bin-grey;
         &:hover {
-            color: var.$red;
+          color: var.$red;
         }
-    }
-    &--check {
+      }
+      &--check {
         border-radius: 50%;
-        border: 2px solid var.$green; 
+        border: 2px solid var.$green;
         width: 2rem;
         height: 2rem;
         display: flex;
@@ -95,14 +99,35 @@ a.icon {
         align-items: center;
         margin-left: 2rem;
         &:hover {
-            background-color: var.$green;
-            color: var.$white;
+          background-color: var.$green;
+          color: var.$white;
         }
-        .icon-checkmark{
-            margin: 0.25rem;
+        .icon-checkmark {
+            position: absolute;
         }
-        
-    }  
+      }
+    }
+  }
 }
 
-
+.todoApp__list__item--checked {
+  .text {
+    color: var.$grey;
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: "";
+      height: 2px;
+      width: calc(100% + 8px);
+      position: absolute;
+      background-color: var.$green;
+      top: 48%;
+      opacity: 0.4;
+      left: -4px;
+    }
+  }
+  a.icon--check {
+    background-color: var.$green;
+    color: var.$white;
+  }
+}
