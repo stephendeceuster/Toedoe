@@ -47,6 +47,14 @@ body {
       &:focus {
         outline: none;
       }
+      &--error {
+        box-shadow: 0 0 0 0.5rem var.$red;
+        color: var.$red;
+        background-color: var.$white;
+        &::placeholder {
+            color: var.$red;
+        }
+      }
     }
     &__button {
       display: flex;

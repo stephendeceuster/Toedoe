@@ -203,6 +203,14 @@ body {
 .todoApp__form__input:focus {
   outline: none;
 }
+.todoApp__form__input--error {
+  box-shadow: 0 0 0 0.5rem #d13947;
+  color: #d13947;
+  background-color: #fff;
+}
+.todoApp__form__input--error::placeholder {
+  color: #d13947;
+}
 .todoApp__form__button {
   display: flex;
   justify-content: center;
