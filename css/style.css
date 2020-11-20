@@ -155,6 +155,10 @@ h1.logo {
   font-family: "Rock Salt", cursive;
 }
 
+input:-webkit-autofill:focus {
+  outline: none !important;
+}
+
 body {
   background: #eef3f6;
 }
@@ -162,6 +166,47 @@ body .todoApp {
   width: 90%;
   max-width: 34rem;
   margin: 2rem auto;
+}
+body .todoApp h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #19ba99;
+  margin-bottom: 1rem;
+}
+body .todoApp__form {
+  background-color: #19ba99;
+  width: 90%;
+  border-radius: 0.5rem;
+  padding: 1.125rem;
+  display: flex;
+  justify-items: flex-start;
+  margin-bottom: 1rem;
+}
+body .todoApp__form__input {
+  color: #fff;
+  background-color: #65c4ae;
+  border-radius: 0.5rem 4.125rem 4.125rem 0.5rem;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  margin-right: -4.125rem;
+}
+body .todoApp__form__input::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+body .todoApp__form__input:focus {
+  border: none;
+}
+body .todoApp__form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #19ba99;
+  background-color: #fff;
+  width: 4.125rem;
+  height: 4.125rem;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

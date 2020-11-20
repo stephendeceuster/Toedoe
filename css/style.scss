@@ -2,11 +2,58 @@
 @use './base/variables' as var;
 @use './base/fonts';
 
+input:-webkit-autofill:focus {
+    outline: none !important;
+}
+
 body {
   background: var.$bodybg;
   .todoApp{
     width: 90%;
     max-width: 34rem;
     margin: 2rem auto; 
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: var.$green;
+      margin-bottom: 1rem;
+    }
+    &__form {
+        background-color: var.$green;
+        width: 90%;
+        border-radius: 0.5rem;
+        padding: 1.125rem;
+        display:flex;
+        justify-items: flex-start;
+        margin-bottom: 1rem;
+        &__input {
+            color: var.$white;
+            background-color: var.$green2;
+            border-radius: 0.5rem 4.125rem 4.125rem 0.5rem;
+            border: none;
+            padding: 1rem;
+            width: 100%;
+            margin-right: -4.125rem;
+            &::placeholder {
+                color: var.$white;
+                opacity: 0.8;
+            }
+            &:focus {
+                border: none;
+            }
+        }
+        &__button {
+            display: flex;
+            justify-content: center;
+
+            align-items: center;
+            color: var.$green;
+            background-color: var.$white;
+            width: 4.125rem;
+            height: 4.125rem;
+            border-radius: 50%;
+        }
+    }
   }
 }
+
