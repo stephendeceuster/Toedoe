@@ -1,6 +1,7 @@
 @use './base/reset';
 @use './base/variables' as var;
 @use './base/fonts';
+@import './icomoon/style.css'
 
 input:-webkit-autofill:focus {
   outline: none !important;
