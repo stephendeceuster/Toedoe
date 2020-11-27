@@ -109,12 +109,13 @@ body {
       }
       
     }
-    a.icon {
+    a.icn {
       color: var.$green;
       display: flex;
       align-items: center;
       &--remove {
         color: var.$bin-grey;
+        font-size: 1.1rem;
         &:hover {
           color: var.$red;
         }
@@ -145,7 +146,7 @@ body {
           color: rgba(var.$text-black , 0.4)
         }
       }
-      a.icon--check {
+      a.icn--check {
         background-color: var.$green;
         color: var.$white;
       }
