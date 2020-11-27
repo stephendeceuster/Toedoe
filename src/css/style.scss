@@ -22,7 +22,7 @@ body {
     color: var.$green;
     margin-bottom: 2rem;
     transform: rotate(-10deg);
-    text-shadow: var.$bodybg 2px 2px 0px, rgba(var.$green3 ,0.4 ) 4px 4px 0px;
+    text-shadow: var.$bodybg 2px 2px 0px, rgba(var.$green3, 0.4) 4px 4px 0px;
   }
   &__form {
     background-color: var.$green;
@@ -38,7 +38,7 @@ body {
       background-color: var.$green2;
       border-radius: 0.5rem 4.125rem 4.125rem 0.5rem;
       border: none;
-      padding: 1.5rem;
+      padding-left: 1.5rem;
       padding-right: 5rem;
       width: 100%;
       margin-right: -4.125rem;
@@ -51,14 +51,14 @@ body {
       &:focus {
         outline: none;
       }
-      &--error {
+      /*&--error {
         box-shadow: 0 0 0 0.5rem var.$red;
         color: var.$red;
         background-color: var.$white;
         &::placeholder {
           color: var.$red;
         }
-      }
+      }*/
     }
     &__button {
       display: flex;
@@ -67,13 +67,32 @@ body {
       align-items: center;
       color: var.$green;
       background-color: var.$white;
-      width: 4.125rem;
-      height: 4.125rem;
+      width: 4.15rem;
+      height: 4.15rem;
       border-radius: 50%;
+      transition: all 200ms ease-in;
       &:hover {
         color: var.$white;
         background-color: var.$green;
         border: 2px solid var.$white;
+      }
+    }
+    &--error {
+      background-color: var.$red;
+      .todoApp__form__input {
+        background-color: var.$white;
+        color: var.$red;
+        &::placeholder {
+          color: var.$red;
+        }
+      }
+      .todoApp__form__button {
+        background-color: rgba(var.$red, 0.5);
+        color: var.$white;
+        &:hover {
+          border: none;
+          background-color: rgba(var.$red, 0.75);
+        }
       }
     }
   }
@@ -107,7 +126,6 @@ body {
           transition: background-size 400ms;
         }
       }
-      
     }
     a.icn {
       color: var.$green;
@@ -117,6 +135,7 @@ body {
         color: var.$bin-grey;
         font-size: 1.1rem;
         position: relative;
+        transition: all 200ms ease-in;
         &:hover {
           color: var.$red;
         }
@@ -126,11 +145,10 @@ body {
           width: 1px;
           height: 2rem;
           position: absolute;
-          background-color: rgba(var.$bin-grey , 0.4);
+          background-color: rgba(var.$bin-grey, 0.4);
           right: -0.75rem;
           cursor: default;
         }
-
       }
       &--check {
         border-radius: 50%;
@@ -141,6 +159,7 @@ body {
         justify-content: space-around;
         align-items: center;
         margin-left: 1.5rem;
+        transition: all 200ms ease-in;
         &:hover {
           background-color: var.$green;
           color: var.$white;
@@ -148,7 +167,6 @@ body {
         .icon-checkmark {
           position: absolute;
         }
-        
       }
     }
     &__item--checked {
@@ -156,7 +174,7 @@ body {
         span.text {
           background-size: 100% 100%;
           transition: background-size 400ms;
-          color: rgba(var.$text-black , 0.4)
+          color: rgba(var.$text-black, 0.4);
         }
       }
       a.icn--check {
@@ -165,5 +183,4 @@ body {
       }
     }
   }
-
 }
