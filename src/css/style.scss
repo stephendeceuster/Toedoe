@@ -86,7 +86,7 @@ body {
       justify-content: flex-start;
       align-items: center;
       margin-bottom: 0.5rem;
-      padding: 1rem 1.5rem;
+      padding: 1rem 1rem 1rem 1.25rem;
       border-radius: 0.5rem;
       box-shadow: 0px 15px 10px -15px var.$grey;
       .textwrap {
@@ -116,9 +116,21 @@ body {
       &--remove {
         color: var.$bin-grey;
         font-size: 1.1rem;
+        position: relative;
         &:hover {
           color: var.$red;
         }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: 2rem;
+          position: absolute;
+          background-color: rgba(var.$bin-grey , 0.4);
+          right: -0.75rem;
+          cursor: default;
+        }
+
       }
       &--check {
         border-radius: 50%;
@@ -128,7 +140,7 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-left: 2rem;
+        margin-left: 1.5rem;
         &:hover {
           background-color: var.$green;
           color: var.$white;
@@ -136,6 +148,7 @@ body {
         .icon-checkmark {
           position: absolute;
         }
+        
       }
     }
     &__item--checked {
